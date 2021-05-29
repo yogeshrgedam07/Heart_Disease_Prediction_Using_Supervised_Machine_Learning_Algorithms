@@ -2,7 +2,7 @@ import pymysql as pm
 
 
 def loginCheck(user, passw):
-    con = pm.connect(host='localhost', user='root', password='admin', database='healthcare')
+    con = pm.connect(host='localhost', user='root', password='', database='healthcare')
 
     cursor = con.cursor()
 
@@ -21,7 +21,7 @@ def loginCheck(user, passw):
 
 
 def signupCheck(user, passw):
-    con = pm.connect(host='localhost', user='root', password='admin', database='healthcare')
+    con = pm.connect(host='localhost', user='root', password='', database='healthcare')
 
     cursor = con.cursor()
 
