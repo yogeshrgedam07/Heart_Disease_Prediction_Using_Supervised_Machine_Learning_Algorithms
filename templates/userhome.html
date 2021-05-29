@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- Basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- Mobile Metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- Site Metas -->
+   <title>Gcoea Care</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- Site Icons -->
+   <link rel="shortcut icon" href="static/images/fevicon.ico.png" type="image/x-icon" />
+   <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="static/css/bootstrap.min.css">
+   <!-- Site CSS -->
+   <link rel="stylesheet" href="style.css">
+   <!-- Colors CSS -->
+   <link rel="stylesheet" href="static/css/colors.css">
+   <!-- ALL VERSION CSS -->
+   <link rel="stylesheet" href="static/css/versions.css">
+   <!-- Responsive CSS -->
+   <link rel="stylesheet" href="static/css/responsive.css">
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="static/css/custom.css">
+   <!-- Modernizer for Portfolio -->
+   <script src="static/js/modernizer.js"></script>
+   <!-- [if lt IE 9] -->
+   </head>
+   <body class="clinic_version">
+      <!-- LOADER -->
+      <div id="preloader">
+         <img class="preloader" src="static/images/loaders/heart-loading2.gif" alt="">
+      </div>
+      <!-- END LOADER -->
+      <header>
+         <div class="header-top wow fadeIn">
+            <div class="container">
+               <a class="navbar-brand" href="{{url_for('index')}}"><img src="static/images/logo1.png" alt="image"></a>
+               <div class="right-header">
+                  <div class="header-info">
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header-bottom wow fadeIn">
+            <div class="container">
+               <nav class="main-menu">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                  </div>
+
+                  <div id="navbar" class="navbar-collapse collapse">
+                     <ul class="nav navbar-nav">
+                        <li><a data-scroll href="#">Home</a></li>
+                        <li><a data-scroll href="#instr">Instructions</a></li>
+                        <li><a data-scroll href="#predict">Predict</a></li>
+                        <li><a data-scroll href="{{url_for('index')}}">Logout</a></li>
+                     </ul>
+                  </div>
+               </nav>
+
+            </div>
+         </div>
+      </header>
+     <div id="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.4" style="background-image:url('../static/images/slider-bg.png');">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-sm-12">
+                  <div class="text-contant">
+                     <h2>
+                        <span class="center"><span class="icon"><img src="static/images/icon-logo.png" alt="#" /></span></span>
+                        <p class="typewrite" data-period="2000" data-type='[ "{{ message }} {{name}} " , " {{mess}}" , "{{mess1}}"]'>
+                        <span class="wrap"></span>
+                        </p>
+                     </h2>
+                  </div>
+               </div>
+            </div>
+            <!-- end row -->
+         </div>
+         <!-- end container -->
+      </div>
+      <!-- end section -->
+      <div id="instr" class="section wow fadeIn">
+         <div class="container">
+            <div class="heading">
+               <span class="icon-logo"><img src="static/images/icon-logo.png" alt="#"></span>
+               <h2>Read Instruction Carefully.</h2>
+            </div>
+            <!-- end title -->
+            <div class="row">
+               <div class="col-md-20">
+                  <div class="message-box">
+
+                      <h4>1. Age - age in years</h4>
+                      <h4>2. Gender - (1 = male; 0 = female)</h4>
+                      <h4>3. cp - chest pain type</h4>
+                      <p><li>0: Typical angina: chest pain related decrease blood supply to the heart<br></li>
+                         <li>1: Atypical angina: chest pain not related to heart<br></li>
+                         <li>2: Non-anginal pain: typically esophageal spasms (non heart related)<br></li>
+                         <li>3: Asymptomatic: chest pain not showing signs of disease</li>     </p>
+                      <h4>4. trestbps - resting blood pressure</h4>
+                      <p><li>anything above 130-140 is typically cause for concern</li></p>
+                      <h4>5. chol - serum cholestoral in mg/dl</h4>
+                            <p><li>serum = LDL + HDL + .2 * triglycerides<br></li>
+                               <li>above 200 is cause for concern</li></p>
+                      <h4>6. fbs - (fasting blood sugar > 120 mg/dl) (1 = true; 0 = false)</h4>
+                            <p><li>'>126' mg/dL signals diabetes</li></p>
+                      <h4>7. restecg - resting electrocardiographic results</h4>
+                            <p><li>0: Nothing to note<br></li>
+                               <li>1: ST-T Wave abnormality<br></li>
+                                    - can range from mild symptoms to severe problems<br>
+                                    - signals non-normal heart beat<br>
+                               <li>2: Possible or definite left ventricular hypertrophy<br></li>
+                                   - Enlarged heart's main pumping chamber</p>
+                      <h4>8. thalach - maximum heart rate achieved</h4>
+                      <h4>9. exang - exercise induced angina (1 = yes; 0 = no)</h4>
+                      <h4>10. oldpeak - ST depression induced by exercise relative to rest looks at stress of heart during excercise unhealthy heart will stress more</h4>
+                      <h4>11. slope - the slope of the peak exercise ST segment</h4>
+                            <p> <li>0: Upsloping: better heart rate with excercise (uncommon)</li>
+                                <li>1: Flatsloping: minimal change (typical healthy heart)</li>
+                                <li>2: Downslopins: signs of unhealthy heart</li>
+                            </p>
+                      <h4>12. ca - number of major vessels (0-3) colored by flourosopy</h4>
+                      <p><li>colored vessel means the doctor can see the blood passing through</li>
+                         <li>the more blood movement the better (no clots)</li>
+                      </p>
+                      <h4>13. thal - thalium stress result</h4>
+                        <p><li>1,3: normal</li>
+                           <li>6: fixed defect: used to be defect but ok now</li>
+                           <li>7: reversable defect: no proper blood movement when excercising</li>
+                        </p>
+
+                  </div>
+                  <!-- end message box -->
+               </div>
+               <!-- end col -->
+            </div>
+            <!-- end row -->
+         </div>
+         <!-- end container -->
+      </div>
+       <!-------------------------------------------------------------------------------------------------------------->
+      <div id="predict" class="services wow fadeIn center">
+         <div class="container">
+            <div class="row center">
+
+               <div class="col-lg-8 col-md-4 col-sm-6 col-xs-12">
+                  <div class="appointment-form">
+                     <h2> Heart Disease Prediction</h2><br>
+                     <div class="form">
+                              <form method="post" action="/predict"  >
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="text" name="name" placeholder="Name"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="age" placeholder="Age"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" placeholder="Gender" name="sex" />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="cp" placeholder="Chest Pain"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="trestbps" placeholder="Blood Pressure"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="chol" placeholder="Cholesterol"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="fbs" placeholder="Blood sugar"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="restecg" placeholder="Cardio Graphic Result"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="thalach" placeholder="Heart rate"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="exang" placeholder="Exercise"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="oldpeak" placeholder="Depression"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="slope" placeholder="Peak exercise"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="ca" placeholder="major vessel"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="number" name="thal" placeholder="Thalium stress"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <button type="submit">Predict</button><br><br>
+                                    </div>
+                                 </div>
+                              </div>
+                             </form>
+
+
+
+                     </div>
+                  </div>
+                    </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end section -->
+
+      <div class="copyright-area wow fadeIn" >
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8">
+                  <div class="footer-text">
+                     <p>© 2020 Gcoea Care. All Rights Reserved.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end copyrights -->
+      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+      <!-- all js files -->
+      <script src="static/js/all.js"></script>
+      <!-- all plugins -->
+      <script src="static/js/custom.js"></script>
+      <!-- map -->
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
+   </body>
+</html>
